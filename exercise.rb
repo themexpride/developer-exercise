@@ -5,7 +5,7 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
     words = str.split(" ")
-    words.each_with_index do |word, index|  # Add "each_with_index" to keep track of the index of each word in the array
+    words.each_with_index do |word, index|
       if word.length > 4
         if word[0] == word[0].upcase
           words[index] = word[-1].match?(/\p{Punct}/) ? "Marklar#{word[-1]}" : "Marklar"
